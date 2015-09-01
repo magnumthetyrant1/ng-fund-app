@@ -3,21 +3,27 @@
   <h1>ng-fund-app</h1>
 </div>
 
-<div class="main">
-    <table class="fund_table">
-        <thead>
-            <tr>
-                <th colspan="5">
-                    Fund Data
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    #
-                </th>
-            </tr>
-        </thead>
-    </table>
+<div class="main" ng-controller="ngFundAppController">
+    <div id="fund" >
+        <ul>
+            <li>
+                <input type="checkbox" checked>
+                <i></i>
+                <h2>{{contents.fund.FundName}}</h2>
+                <p><b>Fund Size:</b> {{contents.fund.FundSize || "- -" | number}}</p>
+                <p><b>Launch Date:</b> {{contents.fund.LaunchDate | date:'dd.mm.yyyy'}}</p>
+                <p><b>Ticker Symbol:</b> {{contents.fund.TickerSymbol || "- -"}}</p>
+                <p><b>Security:</b> {{contents.fund.security || "- -"}}</p>
+                <p><b>Sector:</b> {{contents.fund.Sector || "- -"}}</p>
+                <p><b>Asset Class:</b> {{contents.fund.AssetClass || "- -"}}</p>
+                <p><b>Investment Style:</b> {{contents.fund.InvestmentStyle || "- -"}}</p>
+                <p><b>Morningstar Rating:</b> {{contents.fund.MorningstarRating || "- -"}}</p>
+                <p><b>NAV:</b> {{contents.fund.NAV || "- -"}}</p>
+                <p><b>NAV Change:</b> {{contents.fund.NAVChange || "- -"}}</p>
+                <p><b>1 Day Return:</b> {{contents.fund.1DayReturn || "- -"}}</p>
+              </li>
+        </ul>
+    </div>
 </div>
 
 <div class="footer">

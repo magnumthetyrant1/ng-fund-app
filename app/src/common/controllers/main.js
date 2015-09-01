@@ -1,10 +1,17 @@
-'use strict';
+(function(){
+    'use strict';
 
-angular.module('ngFundAppApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    angular.module('ngFundApp')
+    .controller("ngFundAppController", function($scope, $http){
+        $scope.content = null;
+        $http({
+            method : 'GET',
+            url    : 'src/data/fund.json'
+        })
+        .success(function(data, status, headers, config){
+            $scope.contents = data;
+        })
+        .error(function(data, status, headers, config) {});
+    });//End of controller
+
+}());

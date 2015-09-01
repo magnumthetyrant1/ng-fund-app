@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngFundAppApp', [
+angular.module('ngFundApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -10,9 +10,10 @@ angular.module('ngFundAppApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'src/common/views/main.html',
-        controller: 'MainCtrl'
+        controller: 'ngFundAppController'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/404.html',
+        templateUrl: 'src/common/views/404.html'
       });
   });
