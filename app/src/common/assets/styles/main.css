@@ -240,3 +240,6 @@ body {
     transform: rotateX(0deg);
   }
 }
+.footer{
+  text-align: center;
+}

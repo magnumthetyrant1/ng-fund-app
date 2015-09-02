@@ -1,9 +1,12 @@
-
+<!--Header Section-->
 <div class="jumbotron">
   <h1>ng-fund-app</h1>
   <h4>Displays details about the Asset Fund using Angular, Node and Grunt.</h4>
 </div>
-
+<!--
+  NGFundAppController:
+    - accesses the fund.json file.
+-->
 <div class="main" ng-controller="ngFundAppController">
     <div id="fund" >
         <ul>
@@ -25,16 +28,16 @@
                     <b>1 Day Return:          </b> {{contents.fund.1DayReturn || "- -"}}<br>
                     <b>YTD Return:            </b> {{contents.fund.YTDReturn || "- -"}} <br>
                     <b>Region:                </b> {{contents.fund.Region || "- -"}}<br>
-			        <b>Currency:              </b> {{contents.fund.Currency || "- -"}} <br>
-			        <b>Total Returns:         </b> {{contents.fund.TotalReturns || "- -"}} <br>
+			              <b>Currency:              </b> {{contents.fund.Currency || "- -"}} <br>
+			              <b>Total Returns:         </b> {{contents.fund.TotalReturns || "- -"}} <br>
                     <b>Average Annual Returns:</b> {{contents.fund.AverageAnnualReturns || "- -" | currency}} <br>
-			        <b>Yield:                 </b> {{contents.fund.Yield}}
+			              <b>Yield:                 </b> {{contents.fund.Yield}}
                 </p>
               </li>
-        </ul>
+        </ul><!-- End of collapsable section -->
     </div>
 </div>
 
 <div class="footer">
-  <p>Max-Andre Zils | 083 280 8046 | zilsmc@gmail.com</p>
+  <p>Max-Andre Zils | 083 280 8046 | <a href="mailto:zilsmc@gmail.com">zilsmc@gmail.com</a></p>
 </div>

@@ -16,5 +16,5 @@ $ grunt serve
 ~~~
 
 
-#### The project should open in your default browser at: http://127.0.0.1:9000/#/
+#### The project should open in your default browser at: http://127.0.0.1:9000/
 
